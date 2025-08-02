@@ -1,0 +1,408 @@
+/* Professional Transaction Table Styling */
+
+/* Main Container */
+.transactions-container {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Main Heading */
+.transactions-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* Table Header */
+thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+thead th {
+  padding: 1.2rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: none;
+  position: relative;
+}
+
+thead th:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Table Body */
+tbody tr {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+tbody tr:hover {
+  background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Table Data Cells */
+tbody td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+  border-right: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+tbody td:last-child {
+  border-right: none;
+}
+
+/* Category Column Styling */
+tbody td:nth-child(1) {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Description Column */
+tbody td:nth-child(2) {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Amount Column Styling */
+tbody td:nth-child(3) {
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: right;
+}
+
+/* Amount with Currency Symbol */
+tbody td:nth-child(3)::before {
+  content: '₹';
+  margin-right: 2px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Date Column */
+tbody td:nth-child(4) {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Type Column Styling */
+tbody td:nth-child(5) {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Type-specific colors */
+tbody tr:has(td:nth-child(5):contains("Income")) td:nth-child(5) {
+  color: #10b981;
+  background: #ecfdf5;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  display: inline-block;
+  min-width: 60px;
+}
+
+tbody tr:has(td:nth-child(5):contains("Expense")) td:nth-child(5) {
+  color: #ef4444;
+  background: #fef2f2;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  display: inline-block;
+  min-width: 60px;
+}
+
+/* Alternative method for type styling (more reliable) */
+tbody td:nth-child(5) {
+  text-align: center;
+}
+
+tbody td:nth-child(5) {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: inline-block;
+  min-width: 60px;
+}
+
+/* Actions Column */
+tbody td:nth-child(6) {
+  text-align: center;
+  padding: 0.75rem;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base Button Styling */
+.edit-button,
+.delete-button {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 70px;
+  justify-content: center;
+}
+
+/* Edit Button */
+.edit-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.edit-button:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.edit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Delete Button */
+.delete-button {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.delete-button:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.delete-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* Empty State */
+.transactions-container table tbody:empty::after {
+  content: "No transactions found";
+  display: block;
+  text-align: center;
+  padding: 3rem;
+  color: #9ca3af;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .transactions-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  table {
+    font-size: 0.9rem;
+  }
+  
+  thead th {
+    padding: 1rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  tbody td {
+    padding: 0.875rem 0.75rem;
+  }
+  
+  tbody td:nth-child(2) {
+    max-width: 150px;
+  }
+}
+
+/* Mobile Responsiveness for Action Buttons */
+@media (max-width: 768px) {
+  .transactions-container {
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .transactions-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Mobile Table Adjustments */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 8px;
+  }
+  
+  thead th {
+    padding: 0.875rem 0.5rem;
+    font-size: 0.8rem;
+    min-width: 100px;
+  }
+  
+  tbody td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+    min-width: 100px;
+  }
+  
+  tbody td:nth-child(2) {
+    max-width: 120px;
+  }
+  
+  tbody td:nth-child(5) {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    min-width: 50px;
+  }
+  
+  /* Mobile Action Buttons */
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  
+  .edit-button,
+  .delete-button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+    min-width: 60px;
+  }
+  
+  tbody td:nth-child(6) {
+    min-width: 80px;
+    padding: 0.5rem 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .transactions-container {
+    margin: 0.25rem;
+    padding: 0.75rem;
+  }
+  
+  .transactions-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  thead th {
+    padding: 0.75rem 0.4rem;
+    font-size: 0.75rem;
+    min-width: 80px;
+  }
+  
+  tbody td {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.8rem;
+    min-width: 80px;
+  }
+  
+  /* Very Small Screen Action Buttons */
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .edit-button,
+  .delete-button {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
+    min-width: 50px;
+  }
+  
+  tbody td:nth-child(6) {
+    min-width: 60px;
+    padding: 0.4rem 0.2rem;
+  }
+}
+
+/* Loading State Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.loading-row {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Scrollbar Styling for Table */
+.transactions-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.transactions-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.transactions-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+}
+
+.transactions-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}

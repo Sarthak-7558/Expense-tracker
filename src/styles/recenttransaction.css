@@ -1,0 +1,46 @@
+.recent-transactions-container {
+  max-height: 300px; /* adjust based on your layout */
+  overflow-y: auto;
+  padding-right: 8px; /* prevent scroll from overlapping content */
+}
+
+/* Optional: smooth, styled scrollbar */
+.recent-transactions-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.recent-transactions-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.recent-transactions-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* Keeps amount vertically aligned */
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.transaction-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 1;
+}
+
+.amount {
+  white-space: nowrap; /* Prevents amount from wrapping */
+  font-weight: 700;
+}
+
+
+
+
+
+

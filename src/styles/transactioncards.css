@@ -1,0 +1,71 @@
+/* Container spacing */
+.balance-card,
+.summary-cards {
+  margin-bottom: 1.5rem;
+}
+
+/* Full-width current balance card */
+.balance-card {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.balance-card p {
+  font-size: 1.1rem;
+  color: #555555b6;
+}
+
+.balance-card h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0 0 0;
+  color: #333;
+}
+
+/* Grid layout for income and expense cards */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Individual income/expense card styling */
+.income-card,
+.expense-card {
+  background-color: #ffffff;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.income-card p,
+.expense-card p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.income {
+  color: green;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.expense {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Optional: make all cards responsive below */
+@media (max-width: 600px) {
+  .balance-card h1 {
+    font-size: 2rem;
+  }
+
+  .income, .expense {
+    font-size: 1.3rem;
+  }
+}

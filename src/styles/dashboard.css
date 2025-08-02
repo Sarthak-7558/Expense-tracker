@@ -1,0 +1,68 @@
+/* Ensures spacing below navbar */
+.dashboard {
+  padding: 1.5rem 2rem;
+  margin-top: 10px; /* adjust based on your navbar height */
+}
+
+/* Flex layout for h2 and button */
+.dashboard-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+/* Heading styling */
+.dashboard-inner h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Add Transaction button */
+.add-transaction-button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  margin-top: 1rem;
+}
+
+.add-transaction-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+
+
+/* Optional: Card container below */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+.dashboard-cards {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.dashboard-card {
+  flex: 1; /* takes equal space */
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+

@@ -1,0 +1,197 @@
+/* Add Transaction Form Styling - Form Only */
+
+/* Main Heading */
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.808);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Transaction Box Container */
+.Transaction-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Transaction Type Radio Buttons */
+.Transaction-type {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.Transaction-type label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(145deg, #f7fafc 0%, #edf2f7 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #4a5568;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  flex: 1;
+  justify-content: center;
+}
+
+.Transaction-type label:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e0;
+}
+
+.Transaction-type input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #667eea;
+  cursor: pointer;
+}
+
+/* Form Input Styling */
+.Transaction-box input[type="number"],
+.Transaction-box select,
+.Transaction-box textarea,
+.Transaction-box input[type="date"] {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #2d3748;
+  background: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.Transaction-box input[type="number"]:focus,
+.Transaction-box select:focus,
+.Transaction-box textarea:focus,
+.Transaction-box input[type="date"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Placeholder Styling */
+.Transaction-box input::placeholder,
+.Transaction-box textarea::placeholder {
+  color: #a0aec0;
+  font-weight: 400;
+}
+
+/* Select Dropdown Styling */
+.Transaction-box select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+}
+
+.Transaction-box select:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23667eea' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+/* Textarea Specific Styling */
+.Transaction-box textarea {
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+/* Date Input Styling */
+.Transaction-box input[type="date"]::-webkit-calendar-picker-indicator {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23667eea' viewBox='0 0 20 20'%3e%3cpath fill-rule='evenodd' d='M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z' clip-rule='evenodd'/%3e%3c/svg%3e");
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+/* Submit Button Styling */
+.Transaction-box button {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  margin-top: 0.25rem;
+}
+
+.Transaction-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.Transaction-box button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .Transaction-box {
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+  
+  .Transaction-type {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .Transaction-type label {
+    padding: 0.75rem 1rem;
+  }
+  
+  .Transaction-box input[type="number"],
+  .Transaction-box select,
+  .Transaction-box textarea,
+  .Transaction-box input[type="date"] {
+    padding: 0.875rem 1rem;
+  }
+  
+  .Transaction-box textarea {
+    min-height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Transaction-box {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    
+  }
+}
