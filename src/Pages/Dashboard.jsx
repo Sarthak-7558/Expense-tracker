@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/dashboard.css';
 import Transactioncard from 'Components/Transactioncard';
-import '../styles/Transactioncards.css';
+import '../styles/transactioncards.css';
 import Recenttransaction from '../Components/Recenttransaction';
 import { Link } from 'react-router-dom';
 import Notransaction from 'Components/Notransaction';
