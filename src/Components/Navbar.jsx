@@ -23,10 +23,12 @@ const Navbar = () => {
     }
   }
 
-  const handleReset=()=>{
-    localStorage.clear();
-    navigate('/');
-  }
+
+  const handleReset = () => {
+  localStorage.clear();
+  window.location.href = '/'; // ✅ This forces a page reload to reset all in-memory state
+};
+
 
 
   return (
