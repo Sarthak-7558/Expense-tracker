@@ -53,7 +53,7 @@ const Transaction = () => {
               <td>{Categoryemojis[tx.category]} {tx.category}</td>
               <td>{tx.description || 'No Description'}</td>
               <td className={tx.type === 'Income' ? 'income' : 'expense'}>
-                ₹{tx.amount}
+                {tx.amount}
               </td>
               <td>{tx.date}</td>
               <td>{tx.type}</td>
